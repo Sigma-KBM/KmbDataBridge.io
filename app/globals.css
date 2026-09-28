@@ -70,3 +70,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes bridge-flow {
+  to {
+    stroke-dashoffset: -64;
+  }
+}
