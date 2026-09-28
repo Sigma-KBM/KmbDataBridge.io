@@ -21,7 +21,7 @@ const en = {
     line1: 'Turn data into',
     accent1: 'better',
     accent2: 'decisions.',
-    support: 'I turn operational data into clear decisions.',
+    support: 'Independent BI and data analytics consulting for operations, quality, and productivity.',
     primary: 'Tell us what you need',
     secondary: 'Explore Services',
     note: 'Written-first communication for clear requirements and full traceability.',
@@ -43,12 +43,12 @@ const en = {
     lastYear: 'vs. last year',
   },
   services: {
-    title: 'Our Services',
-    subtitle: 'Practical analytics for real-world impact',
+    title: 'Consulting Services',
+    subtitle: 'Practical analytics for operational decisions',
     items: [
       {
         title: 'BI Dashboards',
-        body: 'Decision-ready reporting that brings production, quality, sales, or finance data into one clear view.',
+        body: 'Decision-ready reporting that brings production, quality, sales, or finance data into a clear, shared view.',
       },
       {
         title: 'Data Analytics',
@@ -56,7 +56,7 @@ const en = {
       },
       {
         title: 'AI-Ready Insights',
-        body: 'Build practical data foundations that make AI useful and connected to business goals.',
+        body: 'Build reliable, documented data foundations that make future AI use practical and connected to business goals.',
       },
     ],
   },
@@ -66,21 +66,21 @@ const en = {
     synthetic: 'Examples use synthetic demonstration data.',
     ask: 'Ask about a project',
     manufacturing: {
-      title: 'Manufacturing Dashboard',
-      body: 'Real-time production visibility.',
+      title: 'Quality & Operations Analytics',
+      body: 'Four reporting views for operational decisions.',
       frame: 'Manufacturing Overview',
       oee: 'OEE',
       list: ['Production', 'Quality', 'Downtime', 'Throughput'],
     },
     energy: {
       title: 'Energy Efficiency Explorer',
-      body: 'Identify savings. Drive sustainability.',
+      body: 'Explore energy patterns and improvement scenarios.',
       frame: 'Energy Efficiency',
       usage: 'Energy Usage',
     },
     quality: {
       title: 'Quality Analytics',
-      body: 'Higher quality. Lower costs.',
+      body: 'Investigate defects, trends, and process variation.',
       frame: 'Quality Analytics',
       rows: ['Defect Rate', 'Scrap Rate', 'First Pass Yield'],
     },
@@ -88,18 +88,18 @@ const en = {
   about: {
     eyebrow: 'About',
     title: 'Operational experience, translated into data.',
-    body: 'Manuel Marín is a business-process professional focused on quality, productivity, operational improvement, business intelligence, and data analytics. KMB Data Bridge helps leaders turn operational data into practical, traceable actions without unnecessary complexity.',
+    body: 'Manuel Marín is a business-process professional focused on quality, productivity, operational improvement, business intelligence, and data analytics. KMB Data Bridge is an independent consulting practice built to help leaders turn operational data into practical, traceable actions without unnecessary complexity.',
     focus: ['Quality', 'Productivity', 'Operational improvement', 'Business intelligence', 'Data analytics'],
   },
   linkedin: {
     title: 'Latest Insights on LinkedIn',
-    body: 'Practical ideas on data, analytics, and AI for real businesses.',
+    body: 'Practical ideas on operational data, analytics, and AI-ready foundations.',
     cta: 'Follow on LinkedIn',
     side: ['Ideas today.', 'A more efficient', 'tomorrow.'],
   },
   contact: {
     title: 'Let’s turn your data into better decisions.',
-    body: 'Share a short written summary of your goals. Written requests keep requirements clear and every decision traceable.',
+    body: 'Share a short written summary of your goals, current challenge, and available information. Written requests keep requirements clear and every decision traceable.',
     name: 'Name',
     company: 'Company',
     email: 'Email',
@@ -137,7 +137,7 @@ const es: Dictionary = {
     line1: 'Convierte datos en',
     accent1: 'mejores',
     accent2: 'decisiones.',
-    support: 'Convierto datos operativos en decisiones claras.',
+    support: 'Consultoría independiente de BI y análisis de datos para operaciones, calidad y productividad.',
     primary: 'Cuéntanos qué necesitas',
     secondary: 'Explorar servicios',
     note: 'Comunicación por escrito para requisitos claros y trazabilidad completa.',
@@ -159,12 +159,12 @@ const es: Dictionary = {
     lastYear: 'vs. año anterior',
   },
   services: {
-    title: 'Nuestros servicios',
-    subtitle: 'Analítica práctica con impacto real',
+    title: 'Servicios de consultoría',
+    subtitle: 'Analítica práctica para decisiones operativas',
     items: [
       {
         title: 'Dashboards de BI',
-        body: 'Reportes listos para decidir que reúnen datos de producción, calidad, ventas o finanzas en una vista clara.',
+        body: 'Reportes listos para decidir que reúnen datos de producción, calidad, ventas o finanzas en una vista clara y compartida.',
       },
       {
         title: 'Análisis de datos',
@@ -172,7 +172,7 @@ const es: Dictionary = {
       },
       {
         title: 'Insights listos para IA',
-        body: 'Construye bases de datos prácticas que hagan útil la IA y la conecten con los objetivos del negocio.',
+        body: 'Construye bases de datos confiables y documentadas que hagan práctica la IA futura y la conecten con los objetivos del negocio.',
       },
     ],
   },
@@ -182,21 +182,21 @@ const es: Dictionary = {
     synthetic: 'Los ejemplos usan datos sintéticos de demostración.',
     ask: 'Consultar sobre un proyecto',
     manufacturing: {
-      title: 'Dashboard de manufactura',
-      body: 'Visibilidad de producción en tiempo real.',
+      title: 'Analítica de calidad y operaciones',
+      body: 'Cuatro vistas de reportes para decisiones operativas.',
       frame: 'Resumen de manufactura',
       oee: 'OEE',
       list: ['Producción', 'Calidad', 'Paradas', 'Rendimiento'],
     },
     energy: {
       title: 'Explorador de eficiencia energética',
-      body: 'Identifica ahorros. Impulsa la sostenibilidad.',
+      body: 'Explora patrones energéticos y escenarios de mejora.',
       frame: 'Eficiencia energética',
       usage: 'Consumo energético',
     },
     quality: {
       title: 'Análisis de calidad',
-      body: 'Mayor calidad. Menores costos.',
+      body: 'Investiga defectos, tendencias y variación de procesos.',
       frame: 'Análisis de calidad',
       rows: ['Tasa de defectos', 'Tasa de desperdicio', 'Rendimiento a la primera'],
     },
@@ -204,18 +204,18 @@ const es: Dictionary = {
   about: {
     eyebrow: 'Acerca de',
     title: 'Experiencia operativa, traducida a datos.',
-    body: 'Manuel Marín es un profesional de procesos de negocio enfocado en calidad, productividad, mejora operativa, inteligencia de negocio y análisis de datos. KMB Data Bridge ayuda a los líderes a convertir datos operativos en acciones prácticas y trazables, sin complejidad innecesaria.',
+    body: 'Manuel Marín es un profesional de procesos de negocio enfocado en calidad, productividad, mejora operativa, inteligencia de negocio y análisis de datos. KMB Data Bridge es una práctica de consultoría independiente creada para ayudar a líderes a convertir datos operativos en acciones prácticas y trazables, sin complejidad innecesaria.',
     focus: ['Calidad', 'Productividad', 'Mejora operativa', 'Inteligencia de negocio', 'Análisis de datos'],
   },
   linkedin: {
     title: 'Últimas ideas en LinkedIn',
-    body: 'Ideas prácticas sobre datos, analítica e IA para empresas reales.',
+    body: 'Ideas prácticas sobre datos operativos, analítica y bases listas para IA.',
     cta: 'Seguir en LinkedIn',
     side: ['Ideas hoy.', 'Un mañana', 'más eficiente.'],
   },
   contact: {
     title: 'Convirtamos tus datos en mejores decisiones.',
-    body: 'Comparte un breve resumen escrito de tus objetivos. Las solicitudes por escrito mantienen los requisitos claros y cada decisión trazable.',
+    body: 'Comparte un breve resumen escrito de tus objetivos, el reto actual y la información disponible. Las solicitudes por escrito mantienen los requisitos claros y cada decisión trazable.',
     name: 'Nombre',
     company: 'Empresa',
     email: 'Correo electrónico',
