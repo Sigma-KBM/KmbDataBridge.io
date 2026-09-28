@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { Send } from 'lucide-react'
 import { CONTACT_EMAIL } from '@/lib/i18n'
 import { useLanguage } from './language-provider'
+import { assetPath } from '@/lib/utils'
 
 const fieldClass =
   'mt-1.5 w-full rounded-md border border-white/15 bg-white/[0.06] px-3.5 py-2.5 text-white placeholder:text-white/40 focus:border-brand-cyan focus:outline-none focus:ring-2 focus:ring-brand-cyan/40'
@@ -37,7 +38,7 @@ export function Contact() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 md:px-6 lg:grid-cols-[1fr_1.1fr] lg:gap-16 lg:px-8">
         <div className="flex flex-col">
           <div className="flex items-center gap-6">
-            <Image src="/images/kmb-logo.png" alt="" width={96} height={96} className="size-20 shrink-0 rounded-full bg-white md:size-24" />
+            <Image src={assetPath('/images/kmb-logo.png')} alt="" width={96} height={96} className="size-20 shrink-0 rounded-full bg-white md:size-24" />
             <span aria-hidden="true" className="hidden h-16 w-px bg-white/20 sm:block" />
             <h2 id="contact-title" className="text-balance text-2xl font-bold md:text-3xl">
               {c.title}

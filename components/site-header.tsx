@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { useLanguage } from './language-provider'
 import { LanguageToggle } from './language-toggle'
+import { assetPath } from '@/lib/utils'
 
 export function SiteHeader() {
   const { t } = useLanguage()
@@ -23,7 +24,7 @@ export function SiteHeader() {
       <div className="mx-auto flex h-16 max-w-7xl items-center gap-6 px-4 md:h-[72px] md:px-6 lg:px-8">
         <a href="#top" aria-label={t.nav.home} className="relative z-10 shrink-0 self-start">
           <Image
-            src="/images/kmb-logo.png"
+            src={assetPath('/images/kmb-logo.png')}
             alt="KMB Data Bridge"
             width={112}
             height={112}

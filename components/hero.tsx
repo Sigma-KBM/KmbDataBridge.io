@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
 import { useLanguage } from './language-provider'
 import { HeroKpiPanel } from './hero-kpi-panel'
+import { assetPath } from '@/lib/utils'
 
 export function Hero() {
   const { t } = useLanguage()
@@ -11,7 +12,7 @@ export function Hero() {
   return (
     <section id="top" aria-labelledby="hero-title" className="relative overflow-hidden bg-gradient-to-b from-[#f3f9ff] to-pale">
       <Image
-        src="/images/hero-bridge.png"
+        src={assetPath('/images/hero-bridge.png')}
         alt=""
         fill
         priority

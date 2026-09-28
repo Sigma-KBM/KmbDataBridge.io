@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { Check } from 'lucide-react'
 import { useLanguage } from './language-provider'
+import { assetPath } from '@/lib/utils'
 
 export function About() {
   const { t } = useLanguage()
@@ -10,7 +11,7 @@ export function About() {
   return (
     <section id="about" aria-labelledby="about-title" className="scroll-mt-20 border-t border-navy/5 bg-white">
       <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 pb-14 pt-4 md:grid-cols-[auto_1fr] md:gap-12 md:px-6 lg:px-8">
-        <Image src="/images/kmb-logo.png" alt="" width={160} height={160} className="hidden size-40 md:block" />
+        <Image src={assetPath('/images/kmb-logo.png')} alt="" width={160} height={160} className="hidden size-40 md:block" />
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-royal">{t.about.eyebrow}</p>
           <h2 id="about-title" className="mt-2 text-balance text-3xl font-extrabold tracking-tight text-navy">

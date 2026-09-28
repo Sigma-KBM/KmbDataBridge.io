@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { Factory, Leaf, TrendingDown, TrendingUp } from 'lucide-react'
 import type { Dictionary } from '@/lib/i18n'
 import { Gauge, MiniBars, Sparkline } from './dashboard/mini-charts'
+import { assetPath } from '@/lib/utils'
 
 const frame = 'relative flex h-44 overflow-hidden rounded-lg bg-navy shadow-lg shadow-navy/25 ring-1 ring-white/10 sm:h-48 lg:h-44 xl:h-48'
 const imageSizes = '(min-width: 1024px) 20vw, 60vw'
@@ -12,7 +13,7 @@ export function ManufacturingFrame({ t }: { t: Dictionary['portfolio']['manufact
   return (
     <div className={frame}>
       <div className="relative w-[42%] shrink-0">
-        <Image src="/images/portfolio-manufacturing.png" alt="" fill sizes={imageSizes} className="object-cover" />
+        <Image src={assetPath('/images/portfolio-manufacturing.png')} alt="" fill sizes={imageSizes} className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-navy/30 to-navy" />
         <p className="absolute left-3 top-3 flex items-center gap-1.5 text-[11px] font-semibold text-white drop-shadow">
           <Factory aria-hidden="true" className="size-3.5" />
@@ -41,7 +42,7 @@ export function EnergyFrame({ t }: { t: Dictionary['portfolio']['energy'] }) {
   return (
     <div className={frame}>
       <div className="relative w-[55%] shrink-0 sm:w-[60%]">
-        <Image src="/images/portfolio-energy.png" alt="" fill sizes={imageSizes} className="object-cover" />
+        <Image src={assetPath('/images/portfolio-energy.png')} alt="" fill sizes={imageSizes} className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-navy/80" />
         <p className="absolute left-3 top-3 text-[11px] font-semibold text-white drop-shadow">{t.frame}</p>
       </div>
@@ -76,7 +77,7 @@ export function QualityFrame({ t }: { t: Dictionary['portfolio']['quality'] }) {
   return (
     <div className={frame}>
       <div className="relative w-[48%] shrink-0">
-        <Image src="/images/portfolio-quality.png" alt="" fill sizes={imageSizes} className="object-cover" />
+        <Image src={assetPath('/images/portfolio-quality.png')} alt="" fill sizes={imageSizes} className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-navy" />
       </div>
       <div className="flex min-w-0 flex-1 flex-col gap-1.5 p-3 text-white">
