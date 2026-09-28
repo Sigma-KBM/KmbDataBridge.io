@@ -1,0 +1,236 @@
+export type Lang = 'en' | 'es'
+
+export const CONTACT_EMAIL = 'manue@sigma-emprende.com'
+export const LINKEDIN_URL = 'https://www.linkedin.com/in/marinmanuel'
+
+const en = {
+  nav: {
+    services: 'Services',
+    portfolio: 'Portfolio',
+    about: 'About',
+    insights: 'Insights',
+    contact: 'Contact',
+    cta: 'Tell us what you need',
+    menu: 'Open menu',
+    close: 'Close menu',
+    language: 'Language',
+    home: 'KMB Data Bridge home',
+  },
+  hero: {
+    eyebrow: 'Business intelligence for practical decisions',
+    line1: 'Turn data into',
+    accent1: 'better',
+    accent2: 'decisions.',
+    support: 'I turn operational data into clear decisions.',
+    primary: 'Tell us what you need',
+    secondary: 'Explore Services',
+    note: 'Written-first communication for clear requirements and full traceability.',
+    tags: ['Data', 'Insights', 'Efficiency', 'Growth'],
+    sideLeft: ['Bridging', 'data to a', 'brighter', 'tomorrow'],
+    sideRight: ['People', 'Data', 'Solutions', 'Real impact'],
+    sideRight2: ['Connect', 'Analyze', 'Improve', 'Together'],
+  },
+  kpi: {
+    label: 'Sample KPI dashboard with synthetic demonstration data',
+    manufacturing: 'Manufacturing KPI',
+    oee: 'Overall Equipment Effectiveness',
+    lastMonth: 'vs. last month',
+    quality: 'Quality Trend',
+    defect: 'Defect Rate',
+    lastQuarter: 'vs. last quarter',
+    energy: 'Energy Efficiency',
+    usage: 'Energy Usage',
+    lastYear: 'vs. last year',
+  },
+  services: {
+    title: 'Our Services',
+    subtitle: 'Practical analytics for real-world impact',
+    items: [
+      {
+        title: 'BI Dashboards',
+        body: 'Decision-ready reporting that brings production, quality, sales, or finance data into one clear view.',
+      },
+      {
+        title: 'Data Analytics',
+        body: 'Find trends, root causes, bottlenecks, and opportunities hidden in the data you already have.',
+      },
+      {
+        title: 'AI-Ready Insights',
+        body: 'Build practical data foundations that make AI useful and connected to business goals.',
+      },
+    ],
+  },
+  portfolio: {
+    title: 'Featured Portfolio',
+    subtitle: 'Real solutions. Measurable results.',
+    synthetic: 'Examples use synthetic demonstration data.',
+    ask: 'Ask about a project',
+    manufacturing: {
+      title: 'Manufacturing Dashboard',
+      body: 'Real-time production visibility.',
+      frame: 'Manufacturing Overview',
+      oee: 'OEE',
+      list: ['Production', 'Quality', 'Downtime', 'Throughput'],
+    },
+    energy: {
+      title: 'Energy Efficiency Explorer',
+      body: 'Identify savings. Drive sustainability.',
+      frame: 'Energy Efficiency',
+      usage: 'Energy Usage',
+    },
+    quality: {
+      title: 'Quality Analytics',
+      body: 'Higher quality. Lower costs.',
+      frame: 'Quality Analytics',
+      rows: ['Defect Rate', 'Scrap Rate', 'First Pass Yield'],
+    },
+  },
+  about: {
+    eyebrow: 'About',
+    title: 'Operational experience, translated into data.',
+    body: 'Manuel Marín is a business-process professional focused on quality, productivity, operational improvement, business intelligence, and data analytics. KMB Data Bridge helps leaders turn operational data into practical, traceable actions without unnecessary complexity.',
+    focus: ['Quality', 'Productivity', 'Operational improvement', 'Business intelligence', 'Data analytics'],
+  },
+  linkedin: {
+    title: 'Latest Insights on LinkedIn',
+    body: 'Practical ideas on data, analytics, and AI for real businesses.',
+    cta: 'Follow on LinkedIn',
+    side: ['Ideas today.', 'A more efficient', 'tomorrow.'],
+  },
+  contact: {
+    title: 'Let’s turn your data into better decisions.',
+    body: 'Share a short written summary of your goals. Written requests keep requirements clear and every decision traceable.',
+    name: 'Name',
+    company: 'Company',
+    email: 'Email',
+    improve: 'What would you like to improve?',
+    improvePlaceholder: 'e.g. We track OEE in spreadsheets and want one clear weekly view…',
+    submit: 'Tell us what you need',
+    helper: 'Submitting opens your email app with a pre-filled message to',
+    required: 'Required',
+    invalidEmail: 'Enter a valid email address.',
+    subject: 'Project request',
+    side: ['Same data.', 'Brighter', 'possibilities.'],
+  },
+  footer: {
+    rights: 'All rights reserved.',
+  },
+}
+
+export type Dictionary = typeof en
+
+const es: Dictionary = {
+  nav: {
+    services: 'Servicios',
+    portfolio: 'Portafolio',
+    about: 'Acerca de',
+    insights: 'Ideas',
+    contact: 'Contacto',
+    cta: 'Cuéntanos qué necesitas',
+    menu: 'Abrir menú',
+    close: 'Cerrar menú',
+    language: 'Idioma',
+    home: 'Inicio de KMB Data Bridge',
+  },
+  hero: {
+    eyebrow: 'Inteligencia de negocio para decisiones prácticas',
+    line1: 'Convierte datos en',
+    accent1: 'mejores',
+    accent2: 'decisiones.',
+    support: 'Convierto datos operativos en decisiones claras.',
+    primary: 'Cuéntanos qué necesitas',
+    secondary: 'Explorar servicios',
+    note: 'Comunicación por escrito para requisitos claros y trazabilidad completa.',
+    tags: ['Datos', 'Análisis', 'Eficiencia', 'Crecimiento'],
+    sideLeft: ['Tendiendo', 'puentes hacia', 'un mañana', 'más brillante'],
+    sideRight: ['Personas', 'Datos', 'Soluciones', 'Impacto real'],
+    sideRight2: ['Conectar', 'Analizar', 'Mejorar', 'Juntos'],
+  },
+  kpi: {
+    label: 'Panel de KPI de ejemplo con datos sintéticos de demostración',
+    manufacturing: 'KPI de manufactura',
+    oee: 'Eficiencia general de los equipos',
+    lastMonth: 'vs. mes anterior',
+    quality: 'Tendencia de calidad',
+    defect: 'Tasa de defectos',
+    lastQuarter: 'vs. trimestre anterior',
+    energy: 'Eficiencia energética',
+    usage: 'Consumo energético',
+    lastYear: 'vs. año anterior',
+  },
+  services: {
+    title: 'Nuestros servicios',
+    subtitle: 'Analítica práctica con impacto real',
+    items: [
+      {
+        title: 'Dashboards de BI',
+        body: 'Reportes listos para decidir que reúnen datos de producción, calidad, ventas o finanzas en una vista clara.',
+      },
+      {
+        title: 'Análisis de datos',
+        body: 'Encuentra tendencias, causas raíz, cuellos de botella y oportunidades ocultas en los datos que ya tienes.',
+      },
+      {
+        title: 'Insights listos para IA',
+        body: 'Construye bases de datos prácticas que hagan útil la IA y la conecten con los objetivos del negocio.',
+      },
+    ],
+  },
+  portfolio: {
+    title: 'Portafolio destacado',
+    subtitle: 'Soluciones reales. Resultados medibles.',
+    synthetic: 'Los ejemplos usan datos sintéticos de demostración.',
+    ask: 'Consultar sobre un proyecto',
+    manufacturing: {
+      title: 'Dashboard de manufactura',
+      body: 'Visibilidad de producción en tiempo real.',
+      frame: 'Resumen de manufactura',
+      oee: 'OEE',
+      list: ['Producción', 'Calidad', 'Paradas', 'Rendimiento'],
+    },
+    energy: {
+      title: 'Explorador de eficiencia energética',
+      body: 'Identifica ahorros. Impulsa la sostenibilidad.',
+      frame: 'Eficiencia energética',
+      usage: 'Consumo energético',
+    },
+    quality: {
+      title: 'Análisis de calidad',
+      body: 'Mayor calidad. Menores costos.',
+      frame: 'Análisis de calidad',
+      rows: ['Tasa de defectos', 'Tasa de desperdicio', 'Rendimiento a la primera'],
+    },
+  },
+  about: {
+    eyebrow: 'Acerca de',
+    title: 'Experiencia operativa, traducida a datos.',
+    body: 'Manuel Marín es un profesional de procesos de negocio enfocado en calidad, productividad, mejora operativa, inteligencia de negocio y análisis de datos. KMB Data Bridge ayuda a los líderes a convertir datos operativos en acciones prácticas y trazables, sin complejidad innecesaria.',
+    focus: ['Calidad', 'Productividad', 'Mejora operativa', 'Inteligencia de negocio', 'Análisis de datos'],
+  },
+  linkedin: {
+    title: 'Últimas ideas en LinkedIn',
+    body: 'Ideas prácticas sobre datos, analítica e IA para empresas reales.',
+    cta: 'Seguir en LinkedIn',
+    side: ['Ideas hoy.', 'Un mañana', 'más eficiente.'],
+  },
+  contact: {
+    title: 'Convirtamos tus datos en mejores decisiones.',
+    body: 'Comparte un breve resumen escrito de tus objetivos. Las solicitudes por escrito mantienen los requisitos claros y cada decisión trazable.',
+    name: 'Nombre',
+    company: 'Empresa',
+    email: 'Correo electrónico',
+    improve: '¿Qué te gustaría mejorar?',
+    improvePlaceholder: 'p. ej. Medimos el OEE en hojas de cálculo y queremos una vista semanal clara…',
+    submit: 'Cuéntanos qué necesitas',
+    helper: 'Al enviar se abrirá tu aplicación de correo con un mensaje prellenado para',
+    required: 'Obligatorio',
+    invalidEmail: 'Introduce un correo electrónico válido.',
+    subject: 'Solicitud de proyecto',
+    side: ['Los mismos datos.', 'Más', 'posibilidades.'],
+  },
+  footer: {
+    rights: 'Todos los derechos reservados.',
+  },
+}
+
+export const dictionaries: Record<Lang, Dictionary> = { en, es }
