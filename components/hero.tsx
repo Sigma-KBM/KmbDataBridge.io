@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { useLanguage } from './language-provider'
 import { HeroKpiPanel } from './hero-kpi-panel'
@@ -31,19 +32,19 @@ export function Hero() {
           <p className="mt-5 text-lg font-medium text-navy md:text-xl">{t.hero.support}</p>
 
           <div className="mt-7 flex flex-wrap gap-4">
-            <a
-              href="#contact"
+            <Link
+              href="/contact"
               className="inline-flex items-center gap-3 rounded-md bg-royal px-7 py-3.5 text-base font-bold text-white shadow-lg shadow-royal/25 transition-colors hover:bg-navy"
             >
               {t.hero.primary}
               <ArrowRight aria-hidden="true" className="size-5" />
-            </a>
-            <a
-              href="#services"
+            </Link>
+            <Link
+              href="/services"
               className="inline-flex items-center rounded-md border-2 border-royal bg-white/70 px-7 py-3 text-base font-bold text-royal transition-colors hover:bg-white"
             >
               {t.hero.secondary}
-            </a>
+            </Link>
           </div>
 
           <p className="mt-5 max-w-md text-sm text-navy/70">{t.hero.note}</p>

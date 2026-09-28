@@ -1,6 +1,7 @@
 'use client'
 
 import { ArrowRight, ChartColumn, Network, Search } from 'lucide-react'
+import Link from 'next/link'
 import { useLanguage } from './language-provider'
 
 const icons = [ChartColumn, Search, Network]
@@ -22,8 +23,8 @@ export function Services() {
             const Icon = icons[i]
             return (
               <li key={item.title}>
-                <a
-                  href="#contact"
+                <Link
+                  href="/services"
                   className="group flex h-full items-center gap-4 rounded-lg bg-white p-5 shadow-sm ring-1 ring-navy/5 transition-shadow hover:shadow-md"
                 >
                   <span className="flex size-14 shrink-0 items-center justify-center rounded-full bg-pale text-royal">
@@ -34,7 +35,7 @@ export function Services() {
                     <span className="mt-1 block text-sm leading-relaxed text-navy/70">{item.body}</span>
                   </span>
                   <ArrowRight aria-hidden="true" className="size-5 shrink-0 text-royal transition-transform group-hover:translate-x-1" />
-                </a>
+                </Link>
               </li>
             )
           })}

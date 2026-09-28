@@ -15,11 +15,21 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [lang, setLang] = useState<Lang>('en')
 
   useEffect(() => {
+    const saved = window.localStorage.getItem('kmb-language')
+    if (saved === 'en' || saved === 'es') setLang(saved)
+  }, [])
+
+  useEffect(() => {
     document.documentElement.lang = lang
   }, [lang])
 
+  function selectLanguage(nextLang: Lang) {
+    setLang(nextLang)
+    window.localStorage.setItem('kmb-language', nextLang)
+  }
+
   return (
-    <LanguageContext.Provider value={{ lang, setLang, t: dictionaries[lang] }}>
+    <LanguageContext.Provider value={{ lang, setLang: selectLanguage, t: dictionaries[lang] }}>
       {children}
     </LanguageContext.Provider>
   )

@@ -2,15 +2,16 @@
 
 import { useLanguage } from './language-provider'
 import { LanguageToggle } from './language-toggle'
+import Link from 'next/link'
 
 export function SiteFooter() {
   const { t } = useLanguage()
   const links = [
-    { href: '#services', label: t.nav.services },
-    { href: '#portfolio', label: t.nav.portfolio },
-    { href: '#about', label: t.nav.about },
-    { href: '#insights', label: t.nav.insights },
-    { href: '#contact', label: t.nav.contact },
+    { href: '/services', label: t.nav.services },
+    { href: '/portfolio', label: t.nav.portfolio },
+    { href: '/about', label: t.nav.about },
+    { href: '/insights', label: t.nav.insights },
+    { href: '/contact', label: t.nav.contact },
   ]
 
   return (
@@ -24,9 +25,9 @@ export function SiteFooter() {
             {links.map((link, i) => (
               <li key={link.href} className="flex items-center gap-3">
                 {i > 0 && <span aria-hidden="true" className="text-navy/30">|</span>}
-                <a href={link.href} className="hover:text-royal">
+                <Link href={link.href} className="hover:text-royal">
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

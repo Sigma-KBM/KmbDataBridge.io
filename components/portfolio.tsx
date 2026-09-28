@@ -1,6 +1,7 @@
 'use client'
 
 import { ArrowRight, Info } from 'lucide-react'
+import Link from 'next/link'
 import { useLanguage } from './language-provider'
 import { EnergyFrame, ManufacturingFrame, QualityFrame } from './portfolio-cards'
 
@@ -34,8 +35,8 @@ export function Portfolio() {
           {projects.map((project) => (
             <li key={project.key}>
               <article>
-                <a
-                  href="#contact"
+                <Link
+                  href="/portfolio"
                   aria-label={`${project.title}: ${p.ask}`}
                   className="group block rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-royal"
                 >
@@ -47,7 +48,7 @@ export function Portfolio() {
                     </div>
                     <ArrowRight aria-hidden="true" className="mt-2 size-5 shrink-0 text-royal transition-transform group-hover:translate-x-1" />
                   </div>
-                </a>
+                </Link>
               </article>
             </li>
           ))}
