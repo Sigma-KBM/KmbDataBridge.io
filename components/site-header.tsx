@@ -2,15 +2,19 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useState } from 'react'
+import { cn } from '@/lib/utils'
 import { Menu, X } from 'lucide-react'
 import { useLanguage } from './language-provider'
 import { LanguageToggle } from './language-toggle'
 import { assetPath } from '@/lib/utils'
 
 export function SiteHeader() {
-  const { t } = useLanguage()
+  const { t, lang } = useLanguage()
   const [open, setOpen] = useState(false)
+  const pathname = (usePathname() ?? '/').replace(/\/$/, '') || '/'
+  const isActive = (href: string) => pathname === href
 
   const links = [
     { href: '/services', label: t.nav.services },
@@ -38,7 +42,16 @@ export function SiteHeader() {
           <ul className="flex items-center gap-10 text-[17px]">
             {links.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="text-white/90 transition-colors hover:text-brand-cyan">
+                <Link
+                  href={link.href}
+                  aria-current={isActive(link.href) ? 'page' : undefined}
+                  className={cn(
+                    'relative py-2 transition-colors after:absolute after:inset-x-0 after:-bottom-1 after:h-[3px] after:rounded-full after:bg-brand-cyan after:transition-transform',
+                    isActive(link.href)
+                      ? 'font-semibold text-white after:scale-x-100'
+                      : 'text-white/75 after:scale-x-0 hover:text-brand-cyan',
+                  )}
+                >
                   {link.label}
                 </Link>
               </li>
@@ -70,12 +83,18 @@ export function SiteHeader() {
       {open && (
         <nav id="mobile-nav" aria-label="Mobile" className="border-t border-white/10 bg-navy px-4 pb-6 pt-8 lg:hidden">
           <ul className="flex flex-col gap-1">
-            {links.map((link) => (
+            {[{ href: '/', label: lang === 'en' ? 'Home' : 'Inicio' }, ...links].map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="block rounded-md px-3 py-3 text-lg text-white/90 hover:bg-white/5 hover:text-brand-cyan"
+                  aria-current={isActive(link.href) ? 'page' : undefined}
+                  className={cn(
+                    'flex items-center gap-3 rounded-md border-l-4 px-3 py-3 text-lg transition-colors',
+                    isActive(link.href)
+                      ? 'border-brand-cyan bg-white/10 font-semibold text-white'
+                      : 'border-transparent text-white/80 hover:bg-white/5 hover:text-brand-cyan',
+                  )}
                 >
                   {link.label}
                 </Link>
