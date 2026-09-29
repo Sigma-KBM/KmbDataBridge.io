@@ -14,13 +14,14 @@ export function SiteHeader() {
   const { t, lang } = useLanguage()
   const [open, setOpen] = useState(false)
   const pathname = (usePathname() ?? '/').replace(/\/$/, '') || '/'
-  const isActive = (href: string) => pathname === href
+  const isActive = (href: string) => pathname === href || (href !== '/' && pathname.startsWith(`${href}/`))
 
   const links = [
     { href: '/services', label: t.nav.services },
     { href: '/portfolio', label: t.nav.portfolio },
     { href: '/about', label: t.nav.about },
     { href: '/insights', label: t.nav.insights },
+    { href: '/behind-the-numbers', label: t.nav.blog },
     { href: '/contact', label: t.nav.contact },
   ]
 
@@ -38,8 +39,8 @@ export function SiteHeader() {
           />
         </Link>
 
-        <nav aria-label="Primary" className="ml-6 hidden lg:ml-14 lg:block">
-          <ul className="flex items-center gap-10 text-[17px]">
+        <nav aria-label="Primary" className="ml-10 hidden xl:block 2xl:ml-14">
+          <ul className="flex items-center gap-7 whitespace-nowrap text-base 2xl:gap-10 2xl:text-[17px]">
             {links.map((link) => (
               <li key={link.href}>
                 <Link
@@ -73,7 +74,7 @@ export function SiteHeader() {
             aria-expanded={open}
             aria-controls="mobile-nav"
             aria-label={open ? t.nav.close : t.nav.menu}
-            className="inline-flex size-10 items-center justify-center rounded-md text-white hover:bg-white/10 lg:hidden"
+            className="inline-flex size-10 items-center justify-center rounded-md text-white hover:bg-white/10 xl:hidden"
           >
             {open ? <X className="size-6" /> : <Menu className="size-6" />}
           </button>
@@ -81,7 +82,7 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <nav id="mobile-nav" aria-label="Mobile" className="border-t border-white/10 bg-navy px-4 pb-6 pt-8 lg:hidden">
+        <nav id="mobile-nav" aria-label="Mobile" className="border-t border-white/10 bg-navy px-4 pb-6 pt-8 xl:hidden">
           <ul className="flex flex-col gap-1">
             {[{ href: '/', label: lang === 'en' ? 'Home' : 'Inicio' }, ...links].map((link) => (
               <li key={link.href}>
