@@ -6,6 +6,7 @@ import { LINKEDIN_URL } from '@/lib/i18n'
 import { useLanguage } from './language-provider'
 import { Contact } from './contact'
 import { BridgeArt } from './bridge-art'
+import { BridgeConnector, MobileConnector } from './bridge-connector'
 import { EnergyFrame, ManufacturingFrame, QualityFrame } from './portfolio-cards'
 
 type PageKind = 'services' | 'portfolio' | 'about' | 'insights' | 'contact'
@@ -389,11 +390,12 @@ function PortfolioPage({ c }: { c: Copy }) {
           <h2 id="examples-title" className="text-3xl font-extrabold tracking-tight text-navy">
             {p.moreTitle}
           </h2>
-          <div className="relative mt-10">
-            <BridgeArt variant="dataflow" className="absolute inset-x-0 top-1/2 hidden w-full -translate-y-1/2 text-royal opacity-25 lg:block" />
-            <ul className="relative grid gap-8 lg:grid-cols-3 lg:gap-10">
-              {examples.map((ex) => (
-                <li key={ex.key} className="rounded-2xl bg-white p-3 shadow-lg shadow-navy/10">
+          <div className="mt-10 lg:mt-8">
+            <BridgeConnector from="lg" className="mb-0" />
+            <ul className="grid gap-8 lg:grid-cols-3 lg:gap-10">
+              {examples.map((ex, i) => (
+                <li key={ex.key} className="relative rounded-2xl bg-white p-3 shadow-lg shadow-navy/10">
+                  {i < examples.length - 1 && <MobileConnector from="lg" />}
                   {ex.visual}
                   <div className="px-2 pb-2 pt-4">
                     <h3 className="text-lg font-bold text-navy">{ex.title}</h3>
@@ -464,15 +466,16 @@ function InsightsPage({ c }: { c: Copy }) {
     <main>
       <PageHero c={c} eyebrow={s.eyebrow} title={s.title} body={s.body} showCta={false} />
 
-      <section aria-labelledby="topics-title" className="relative overflow-hidden bg-white">
-        <BridgeArt variant="nodes" className="absolute inset-x-0 top-6 mx-auto w-full max-w-6xl text-royal opacity-[0.13]" />
-        <div className={`${container} relative py-16 md:py-20`}>
+      <section aria-labelledby="topics-title" className="bg-white">
+        <div className={`${container} py-16 md:py-20`}>
           <h2 id="topics-title" className="text-3xl font-extrabold tracking-tight text-navy">
             {s.topicsTitle}
           </h2>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
+          <BridgeConnector from="md" variant="knowledge" className="mt-8 rounded-t-2xl bg-pale/60 px-4 pt-6 lg:px-8" />
+          <div className="mt-10 grid gap-6 md:mt-0 md:grid-cols-3">
             {s.topics.map(([title, body], i) => (
-              <article key={title} className="rounded-2xl border border-navy/10 bg-white/95 p-7 shadow-sm backdrop-blur-sm">
+              <article key={title} className="relative rounded-2xl border border-navy/10 bg-white p-7 shadow-sm">
+                {i < s.topics.length - 1 && <MobileConnector from="md" gap="h-6" />}
                 <span className="flex items-center gap-2">
                   <span aria-hidden="true" className={`size-3 rounded-full ${i === 1 ? 'bg-brand-amber' : 'bg-brand-cyan'}`} />
                   <FileText aria-hidden="true" className="size-5 text-royal" />

@@ -1,6 +1,13 @@
 import { cn } from '@/lib/utils'
 
-export type BridgeVariant = 'blueprint' | 'dataflow' | 'lineart' | 'nodes' | 'calm'
+export type BridgeVariant = 'blueprint' | 'dataflow' | 'lineart' | 'nodes' | 'calm' | 'arch'
+
+function archY(x: number) {
+  const t = (x - 180) / 840
+  return (1 - t) ** 2 * 280 + 2 * (1 - t) * t * -40 + t ** 2 * 280
+}
+
+const archPosts = [260, 340, 420, 500, 700, 780, 860, 940]
 
 const LEFT_TOWER = 380
 const RIGHT_TOWER = 820
@@ -120,6 +127,33 @@ export function BridgeArt({ variant, className }: { variant: BridgeVariant; clas
             ))}
           </g>
           <circle cx={600} cy={110} r={12} fill="var(--color-brand-amber)" />
+        </>
+      )}
+
+      {variant === 'arch' && (
+        <>
+          <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M60 120 H1140" strokeWidth={5} />
+            <path d="M180 280 Q600 -40 1020 280" strokeWidth={4} />
+            <path d="M240 280 Q600 20 960 280" strokeWidth={1.5} opacity={0.6} />
+            {archPosts.map((x) => (
+              <path key={x} d={`M${x} 120 V${archY(x)}`} strokeWidth={2} />
+            ))}
+            <path d="M120 292 H1080 M300 304 H900" strokeWidth={1.5} opacity={0.5} />
+          </g>
+          <g stroke="currentColor" strokeWidth={1.6} fill="none" opacity={0.8}>
+            <path d="M600 120 L540 60 L600 30 L660 60 Z M540 60 L660 60" />
+          </g>
+          {[
+            [60, 120],
+            [1140, 120],
+            [540, 60],
+            [660, 60],
+          ].map(([cx, cy]) => (
+            <circle key={`${cx}-${cy}`} cx={cx} cy={cy} r={10} fill="var(--color-brand-cyan)" />
+          ))}
+          <circle cx={600} cy={30} r={12} fill="var(--color-brand-amber)" />
+          <circle cx={600} cy={120} r={9} fill="currentColor" />
         </>
       )}
 
